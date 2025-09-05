@@ -1,31 +1,12 @@
-# Awake Emporium 🧵✨
+# React + Vite
 
-Awake Emporium is a modern fabric e-commerce platform where customers can explore, search, and purchase fabrics by length (meter/yard). The platform also provides user accounts and an admin dashboard for managing products and orders.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 🚀 Tech Stack
-- **Frontend**: React + Vite
-- **Styling**: TailwindCSS
-- **Routing**: React Router
-- **State Management**: Context API (Auth, Cart, Admin)
-- **Mock Backend**: JSON data (for now)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
----
+## Expanding the ESLint configuration
 
-## 🛠 Features (Planned)
-### 🛒 Customer
-- Browse fabrics by category, color, and material
-- Product detail pages with pricing per meter
-- Add fabrics to shopping cart
-- Checkout flow (mock payment)
-- User accounts: signup, login, profile, order history
-
-### 👨‍💼 Admin
-- Dashboard with store stats
-- Manage fabrics (add, update, delete)
-- Manage orders (view, update status)
-
----
-
-## 📂 Project Structure
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
