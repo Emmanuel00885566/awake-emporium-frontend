@@ -2,10 +2,12 @@
 import { useState } from "react";
 import fabrics from "../../data/fabrics";
 import bgImage from "../../assets/fabrics/background.png";
+import { useCart } from "../../context/CartContext"; // import cart context
 
 export default function Shop() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
+  const { addToCart } = useCart(); // get addToCart from context
 
   const filteredFabrics = fabrics.filter((fabric) => {
     const matchesCategory =
@@ -74,6 +76,14 @@ export default function Shop() {
                   <p className="mt-2 font-bold text-[#1e3a8a]">
                     ${fabric.pricePerMeter} / meter
                   </p>
+
+                  {/* Add to Cart button */}
+                  <button
+                    onClick={() => addToCart(fabric)}
+                    className="mt-3 w-full bg-[#0a1a4a] text-white py-2 px-4 rounded-xl hover:bg-[#1e3a8a] transition"
+                  >
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             ))
