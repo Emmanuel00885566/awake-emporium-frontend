@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import bgImage from "./assets/fabrics/background.png"
+import { Toaster } from "react-hot-toast"   // ✅ import Toaster
 
 // Public pages
 import Home from "./pages/public/Home.jsx"
@@ -10,6 +11,7 @@ import Cart from "./pages/public/Cart.jsx"
 import Checkout from "./pages/public/Checkout.jsx"
 import Login from "./pages/public/Login.jsx"
 import Signup from "./pages/public/Signup.jsx"
+import ThankYou from "./pages/public/ThankYou"
 
 function App() {
   return (
@@ -33,9 +35,13 @@ function App() {
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/thank-you" element={<ThankYou />} />
             </Routes>
           </div>
         </div>
+
+        {/* ✅ Toast notifications portal */}
+        <Toaster position="top-right" />
       </div>
     </Router>
   )
